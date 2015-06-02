@@ -1,5 +1,5 @@
-django-rest-custom-paginations
-==============================
+django-rest-framework-custom-paginations
+========================================
 
 Custom paginations for django rest framework
 
@@ -26,4 +26,27 @@ Configure your rest framework : ::
 
     REST_FRAMEWORK = {
         'DEFAULT_PAGINATION_SERIALIZER_CLASS': 'rest_framework_custom_paginations.paginations.SporePaginationSerializer'
+    }
+
+Example
+-------
+
+Results of Spore Pagination : ::
+
+    {
+        "count": 532,
+        "next": "http://myurls/persons.json?structure=mystructure&page=3",
+        "next_params": {
+            "page": 3,
+            "structure": "mystructure"
+        },
+        "num_pages": 6,
+        "previous": "http://myurls/persons.json?structure=mystructure&page=1",
+        "previous_params": {
+            "page": 1,
+            "structure": "mystructure"
+        },
+        "results": [
+            ...
+        ]
     }
