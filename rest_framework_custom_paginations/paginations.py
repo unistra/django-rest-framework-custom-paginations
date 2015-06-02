@@ -19,7 +19,7 @@ class SporeNextPageField(ReadOnlyField):
             return None
         page = value.next_page_number()
         request = self.context.get('request')
-        params = copy.deepcopy(request.QUERY_PARAMS)
+        params = { k:(v if len(v)>1 else v[0]) for k,v in request.QUERY_PARAMS.lists()}
         params['page'] = page
         return params
 
@@ -40,7 +40,7 @@ class SporePreviousPageField(ReadOnlyField):
             return None
         page = value.previous_page_number()
         request = self.context.get('request')
-        params = copy.deepcopy(request.QUERY_PARAMS)
+        params = { k:(v if len(v)>1 else v[0]) for k,v in request.QUERY_PARAMS.lists()}
         params['page'] = page
         return params
 
