@@ -27,6 +27,18 @@ Configure your rest framework : ::
     REST_FRAMEWORK = {
         'DEFAULT_PAGINATION_SERIALIZER_CLASS': 'rest_framework_custom_paginations.paginations.SporePaginationSerializer'
     }
+    
+Usage
+-----
+
+Add the following parameters in a ListAPIView : ::
+
+    class PersonList(generics.ListAPIView):
+        """ list of person """
+        ...
+        paginate_by = 100
+        paginate_by_param = 'page_size'
+        max_paginate_by = 500
 
 Example
 -------
