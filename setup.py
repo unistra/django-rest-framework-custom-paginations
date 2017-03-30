@@ -18,7 +18,7 @@ with open('requirements.txt') as requirements:
 
 setup(
     name='djangorestframework-custom-paginations',
-    version='1.2.0',
+    version='1.2.1',
     packages=find_packages(),
     install_requires=libraries,
     dependency_links=dependency_links,

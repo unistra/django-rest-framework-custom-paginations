@@ -25,7 +25,7 @@ Add the application in your django settings: ::
 Configure your rest framework for DRF >= 3.1: ::
 
     REST_FRAMEWORK = {
-        'DEFAULT_PAGINATION_CLASS': 'rest_framework_custom_paginations.class.SporePagination',
+        'DEFAULT_PAGINATION_CLASS': 'rest_framework_custom_paginations.classes.SporePagination',
     }
 
 or configure your rest framework for DRF < 3.1: ::
