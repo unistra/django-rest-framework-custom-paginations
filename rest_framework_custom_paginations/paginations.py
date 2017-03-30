@@ -6,6 +6,9 @@ if drf_version < '3.0':
 else:
     from rest_framework.serializers import ReadOnlyField
 
+"""
+Custom serializer for django-rest-framework < 3.1
+"""
 
 
 class SporeNextPageField(ReadOnlyField):
