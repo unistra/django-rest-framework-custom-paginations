@@ -9,6 +9,8 @@ Custom class for django-rest-framework >= 3.1
 
 class SporePagination(PageNumberPagination):
 
+    page_size_query_param = 'page_size'
+
     def custom_get_next_params(self):
         if not self.page.has_next():
             return None
